@@ -216,3 +216,5 @@ Route::get('e_prescription_download/{id}', 'App\Http\Controllers\DoctorConsultat
 //CRON
 Route::get('customer/cr_expiring', 'App\Http\Controllers\DoctorConsultationController@cr_expiring');
 Route::get('customer/cr_reminder', 'App\Http\Controllers\DoctorConsultationController@cr_reminder');
+
+Route::get('customer/hospital_bed_status', 'App\Http\Controllers\BedStatusController@allBeds');

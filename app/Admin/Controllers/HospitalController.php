@@ -36,6 +36,7 @@ class HospitalController extends AdminController
         $grid->column('phone_with_code', __('Phone With Code'));
         $grid->column('email', __('Email'));
         $grid->column('address', __('Address'));
+        $grid->column('bed_count', __('Bed Count'));
         $grid->column('overall_ratings', __('Rating'))->display(function($overall_ratings){
             if($overall_ratings){
                 return $overall_ratings;
@@ -90,6 +91,7 @@ class HospitalController extends AdminController
         $show->field('opening_time', __('opening time'));
         $show->field('closing_time', __('closing time'));
         $show->field('description', __('description'));
+        $show->field('bed_count', __('Bed Count'));
         $show->field('address', __('Address'));
         $show->field('status', __('Status'));
         $show->field('created_at', __('Created at'));
@@ -141,6 +143,9 @@ class HospitalController extends AdminController
         $form->time('closing_time', __('Closing Time'))->default(date('H:i:s'));
         $form->textarea('description', __('Description'))->rules(function ($form) {
             return 'required';
+        });
+        $form->text('bed_count', __('Bed Count'))->rules(function ($form) {
+            return 'numeric|digits_between:1,20000';
         });
         $form->select('type', __('Type'))->options([ "1" => "Hospital", "2" => "Clinic"])->default(1)->rules(function ($form) {
             return 'required';

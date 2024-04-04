@@ -32,7 +32,7 @@ class BedController extends AdminController
             $hospitals = Hospital::where('id',$hospitals)->value('hospital_name');
             return $hospitals;
         });
-        $grid->column('name', __('Name'));
+        $grid->column('name', __('Bed Count'));
         
         if(Admin::user()->isAdministrator()){
             $grid->disableExport();
@@ -89,6 +89,7 @@ class BedController extends AdminController
     {
         $form = new Form(new Bed());
         $hospitals = Hospital::pluck('hospital_name','id');
+
         
         if(!Admin::user()->isAdministrator()){
             $form->hidden('hospital_id')->value($hospital_id);
@@ -97,7 +98,8 @@ class BedController extends AdminController
             return 'required';
         });
         }
-        $form->text('name', __('Name'))->rules('required');
+        
+        $form->number('name', __('Bed Count'))->rules('required');
         
         $form->tools(function (Form\Tools $tools) {
            $tools->disableDelete(); 
@@ -110,6 +112,7 @@ class BedController extends AdminController
         });
 
         return $form;
+
     }
-    
+
 }
