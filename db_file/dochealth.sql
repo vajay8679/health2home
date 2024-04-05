@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2024 at 07:10 PM
+-- Generation Time: Apr 05, 2024 at 10:09 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -13149,7 +13149,112 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (12922, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-03-31 16:48:09', '2024-03-31 16:48:09'),
 (12923, 1, 'admin/hospital-bed-status', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 16:48:44', '2024-03-31 16:48:44'),
 (12924, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 16:49:08', '2024-03-31 16:49:08'),
-(12925, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-03-31 16:51:52', '2024-03-31 16:51:52');
+(12925, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-03-31 16:51:52', '2024-03-31 16:51:52'),
+(12926, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:26:26', '2024-03-31 17:26:26'),
+(12927, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:26:33', '2024-03-31 17:26:33'),
+(12928, 1, 'admin/hospital-bed', 'POST', '127.0.0.1', '{\"hospital_id\":null,\"name\":\"Two\",\"_token\":\"ERqyUrTFMecotqSPX8OtjJPtJopD1WEwyQ7hfUgI\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospital-bed\"}', '2024-03-31 17:27:15', '2024-03-31 17:27:15'),
+(12929, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '[]', '2024-03-31 17:27:15', '2024-03-31 17:27:15'),
+(12930, 1, 'admin/hospital-bed', 'POST', '127.0.0.1', '{\"hospital_id\":\"1\",\"name\":\"Two\",\"_token\":\"ERqyUrTFMecotqSPX8OtjJPtJopD1WEwyQ7hfUgI\"}', '2024-03-31 17:27:21', '2024-03-31 17:27:21'),
+(12931, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-03-31 17:27:22', '2024-03-31 17:27:22'),
+(12932, 1, 'admin/hospital-bed/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:27:33', '2024-03-31 17:27:33'),
+(12933, 1, 'admin/hospital-bed/1', 'PUT', '127.0.0.1', '{\"hospital_id\":\"1\",\"name\":\"Ones\",\"_token\":\"ERqyUrTFMecotqSPX8OtjJPtJopD1WEwyQ7hfUgI\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospital-bed\"}', '2024-03-31 17:27:40', '2024-03-31 17:27:40'),
+(12934, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-03-31 17:27:40', '2024-03-31 17:27:40'),
+(12935, 1, 'admin/hospital-bed/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:27:46', '2024-03-31 17:27:46'),
+(12936, 1, 'admin/hospital-bed/1', 'PUT', '127.0.0.1', '{\"hospital_id\":\"1\",\"name\":\"One\",\"_token\":\"ERqyUrTFMecotqSPX8OtjJPtJopD1WEwyQ7hfUgI\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospital-bed\"}', '2024-03-31 17:27:51', '2024-03-31 17:27:51'),
+(12937, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-03-31 17:27:51', '2024-03-31 17:27:51'),
+(12938, 1, 'admin/_handle_action_', 'POST', '127.0.0.1', '{\"_key\":\"2\",\"_model\":\"App_Models_Bed\",\"_token\":\"ERqyUrTFMecotqSPX8OtjJPtJopD1WEwyQ7hfUgI\",\"_action\":\"Encore_Admin_Grid_Actions_Delete\",\"_input\":\"true\"}', '2024-03-31 17:28:00', '2024-03-31 17:28:00'),
+(12939, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:28:00', '2024-03-31 17:28:00'),
+(12940, 1, 'admin/hospital-bed-status', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:31:36', '2024-03-31 17:31:36'),
+(12941, 1, 'admin/hospital-bed-status/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:31:41', '2024-03-31 17:31:41'),
+(12942, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:38:19', '2024-03-31 17:38:19'),
+(12943, 1, 'admin/hospital-bed-status', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:39:52', '2024-03-31 17:39:52'),
+(12944, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:40:28', '2024-03-31 17:40:28'),
+(12945, 1, 'admin/hospital-bed-status', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:41:08', '2024-03-31 17:41:08'),
+(12946, 1, 'admin/hospital-bed-status/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:41:12', '2024-03-31 17:41:12'),
+(12947, 1, 'admin/hospital-bed-status/create', 'GET', '127.0.0.1', '[]', '2024-03-31 17:44:54', '2024-03-31 17:44:54'),
+(12948, 1, 'admin/hospital-bed-status/Empty', 'GET', '127.0.0.1', '[]', '2024-03-31 17:44:57', '2024-03-31 17:44:57'),
+(12949, 1, 'admin/hospital-bed-status/create', 'GET', '127.0.0.1', '[]', '2024-03-31 17:45:23', '2024-03-31 17:45:23'),
+(12950, 1, 'admin/hospital-bed-status/Empty', 'GET', '127.0.0.1', '[]', '2024-03-31 17:45:25', '2024-03-31 17:45:25'),
+(12951, 1, 'admin/hospital-bed-status/create', 'GET', '127.0.0.1', '[]', '2024-03-31 17:47:11', '2024-03-31 17:47:11'),
+(12952, 1, 'admin/hospital-bed-status', 'POST', '127.0.0.1', '{\"hospital_id\":\"1\",\"bed_id\":\"1\",\"status\":\"Assigned\",\"_token\":\"ERqyUrTFMecotqSPX8OtjJPtJopD1WEwyQ7hfUgI\"}', '2024-03-31 17:47:36', '2024-03-31 17:47:36'),
+(12953, 1, 'admin/hospital-bed-status', 'GET', '127.0.0.1', '[]', '2024-03-31 17:47:37', '2024-03-31 17:47:37'),
+(12954, 1, 'admin/hospital-bed-status/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-03-31 17:47:43', '2024-03-31 17:47:43'),
+(12955, 1, 'admin/hospital-bed-status/1', 'PUT', '127.0.0.1', '{\"hospital_id\":\"1\",\"bed_id\":\"1\",\"status\":\"Empty\",\"_token\":\"ERqyUrTFMecotqSPX8OtjJPtJopD1WEwyQ7hfUgI\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospital-bed-status\"}', '2024-03-31 17:47:51', '2024-03-31 17:47:51'),
+(12956, 1, 'admin/hospital-bed-status', 'GET', '127.0.0.1', '[]', '2024-03-31 17:47:51', '2024-03-31 17:47:51'),
+(12957, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-04-02 18:23:20', '2024-04-02 18:23:20'),
+(12958, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-04-02 18:23:22', '2024-04-02 18:23:22'),
+(12959, 1, 'admin/hospitals', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-02 18:24:05', '2024-04-02 18:24:05'),
+(12960, 1, 'admin/hospitals/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-02 18:26:01', '2024-04-02 18:26:01'),
+(12961, 1, 'admin/hospitals/create', 'GET', '127.0.0.1', '[]', '2024-04-02 18:30:14', '2024-04-02 18:30:14'),
+(12962, 1, 'admin/hospitals/create', 'GET', '127.0.0.1', '[]', '2024-04-02 18:35:53', '2024-04-02 18:35:53'),
+(12963, 1, 'admin/hospitals', 'POST', '127.0.0.1', '{\"hospital_name\":\"Green City Hospital\",\"phone_number\":\"2815730858\",\"phone_with_code\":\"2815730858\",\"email\":\"sunilkumar@gmail.com\",\"website\":null,\"address\":\"Flat no 101\",\"latitude\":\"51.608082\",\"longitude\":\"51.834236\",\"username\":\"sunilkumar\",\"password\":\"Admin@123\",\"opening_time\":\"10:00:54\",\"closing_time\":\"23:05:54\",\"description\":\"bed_countbed_count\",\"bed_count\":\"50\",\"type\":\"1\",\"status\":\"1\",\"is_recommended\":\"0\",\"admin_user_id\":\"0\",\"_token\":\"G7Z0J2oDLD0W4hSL7xqQyKN8qZUyb7dWbaMHL13y\"}', '2024-04-02 18:39:50', '2024-04-02 18:39:50'),
+(12964, 1, 'admin/hospitals/create', 'GET', '127.0.0.1', '[]', '2024-04-02 18:39:51', '2024-04-02 18:39:51'),
+(12965, 1, 'admin/hospitals', 'POST', '127.0.0.1', '{\"hospital_name\":\"Green City Hospital\",\"phone_number\":\"2815730858\",\"phone_with_code\":\"2815730858\",\"email\":\"sunilkumar@gmail.com\",\"website\":null,\"address\":\"Flat no 101\",\"latitude\":\"51.608082\",\"longitude\":\"51.834236\",\"username\":\"sunilkumar\",\"password\":\"Admin@123\",\"opening_time\":\"10:00:54\",\"closing_time\":\"23:05:54\",\"description\":\"bed_countbed_count\",\"bed_count\":\"50\",\"type\":\"1\",\"status\":\"1\",\"is_recommended\":\"0\",\"admin_user_id\":\"0\",\"_token\":\"G7Z0J2oDLD0W4hSL7xqQyKN8qZUyb7dWbaMHL13y\"}', '2024-04-02 18:40:55', '2024-04-02 18:40:55'),
+(12966, 1, 'admin/hospitals/create', 'GET', '127.0.0.1', '[]', '2024-04-02 18:40:56', '2024-04-02 18:40:56'),
+(12967, 1, 'admin/hospitals', 'POST', '127.0.0.1', '{\"hospital_name\":\"Green City Hospital\",\"phone_number\":\"2815730858\",\"phone_with_code\":\"2815730858\",\"email\":\"sunilkumar@gmail.com\",\"website\":null,\"address\":\"Flat no 101\",\"latitude\":\"51.608082\",\"longitude\":\"51.834236\",\"username\":\"sunilkumar\",\"password\":\"Admin@123\",\"opening_time\":\"10:00:54\",\"closing_time\":\"23:05:54\",\"description\":\"bed_countbed_count\",\"bed_count\":\"50\",\"type\":\"1\",\"status\":\"1\",\"is_recommended\":\"0\",\"admin_user_id\":\"0\",\"_token\":\"G7Z0J2oDLD0W4hSL7xqQyKN8qZUyb7dWbaMHL13y\"}', '2024-04-02 18:41:15', '2024-04-02 18:41:15'),
+(12968, 1, 'admin/hospitals', 'GET', '127.0.0.1', '[]', '2024-04-02 18:41:16', '2024-04-02 18:41:16'),
+(12969, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-02 18:43:18', '2024-04-02 18:43:18'),
+(12970, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-02 18:44:00', '2024-04-02 18:44:00'),
+(12971, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '[]', '2024-04-02 18:53:04', '2024-04-02 18:53:04'),
+(12972, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '[]', '2024-04-02 18:55:21', '2024-04-02 18:55:21'),
+(12973, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '[]', '2024-04-02 18:58:54', '2024-04-02 18:58:54'),
+(12974, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-04-03 03:20:06', '2024-04-03 03:20:06'),
+(12975, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-04-03 03:20:07', '2024-04-03 03:20:07'),
+(12976, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:21:43', '2024-04-03 03:21:43'),
+(12977, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:21:48', '2024-04-03 03:21:48'),
+(12978, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:23:27', '2024-04-03 03:23:27'),
+(12979, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:23:30', '2024-04-03 03:23:30'),
+(12980, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '[]', '2024-04-03 03:24:05', '2024-04-03 03:24:05'),
+(12981, 1, 'admin/doctor-bank-details', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:33:09', '2024-04-03 03:33:09'),
+(12982, 1, 'admin/doctor-bank-details/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:33:13', '2024-04-03 03:33:13'),
+(12983, 1, 'admin/booking-request-statuses', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:33:31', '2024-04-03 03:33:31'),
+(12984, 1, 'admin/hospital-earnings', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:33:52', '2024-04-03 03:33:52'),
+(12985, 1, 'admin/hospital-bank-details', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:34:10', '2024-04-03 03:34:10'),
+(12986, 1, 'admin/hospital-facility', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:34:16', '2024-04-03 03:34:16'),
+(12987, 1, 'admin/hospital-facility/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:53:09', '2024-04-03 03:53:09'),
+(12988, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:53:52', '2024-04-03 03:53:52'),
+(12989, 1, 'admin/customer-wallet-histories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:54:01', '2024-04-03 03:54:01'),
+(12990, 1, 'admin/customer-wallet-histories/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:54:03', '2024-04-03 03:54:03'),
+(12991, 1, 'admin/payment-types', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:54:59', '2024-04-03 03:54:59'),
+(12992, 1, 'admin/payment_modes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:55:09', '2024-04-03 03:55:09'),
+(12993, 1, 'admin/payment_modes', 'GET', '127.0.0.1', '[]', '2024-04-03 03:59:23', '2024-04-03 03:59:23'),
+(12994, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:59:35', '2024-04-03 03:59:35'),
+(12995, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 03:59:38', '2024-04-03 03:59:38'),
+(12996, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '[]', '2024-04-03 04:02:17', '2024-04-03 04:02:17'),
+(12997, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-04-03 16:59:24', '2024-04-03 16:59:24'),
+(12998, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-04-03 16:59:26', '2024-04-03 16:59:26'),
+(12999, 1, 'admin/hospitals', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 16:59:47', '2024-04-03 16:59:47'),
+(13000, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 18:21:43', '2024-04-03 18:21:43'),
+(13001, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 18:21:55', '2024-04-03 18:21:55'),
+(13002, 1, 'admin/hospital-bed', 'POST', '127.0.0.1', '{\"hospital_id\":\"1\",\"name\":\"50\",\"_token\":\"ACIBeGmLr8IpszJAwdScGSIiUKllrKLDCfArl3zH\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospital-bed\"}', '2024-04-03 18:22:50', '2024-04-03 18:22:50'),
+(13003, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-04-03 18:22:50', '2024-04-03 18:22:50'),
+(13004, 1, 'admin/hospital-bed/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-03 18:22:58', '2024-04-03 18:22:58'),
+(13005, 1, 'admin/hospital-bed/1', 'PUT', '127.0.0.1', '{\"hospital_id\":\"1\",\"name\":\"40\",\"_token\":\"ACIBeGmLr8IpszJAwdScGSIiUKllrKLDCfArl3zH\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospital-bed\"}', '2024-04-03 18:23:12', '2024-04-03 18:23:12'),
+(13006, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-04-03 18:23:13', '2024-04-03 18:23:13'),
+(13007, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-04-03 18:25:23', '2024-04-03 18:25:23'),
+(13008, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-04-04 04:00:46', '2024-04-04 04:00:46'),
+(13009, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-04-04 04:00:48', '2024-04-04 04:00:48'),
+(13010, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-04-04 16:57:43', '2024-04-04 16:57:43'),
+(13011, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-04-04 16:57:46', '2024-04-04 16:57:46'),
+(13012, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 16:58:02', '2024-04-04 16:58:02'),
+(13013, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 16:58:11', '2024-04-04 16:58:11'),
+(13014, 1, 'admin/hospitals', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 17:00:28', '2024-04-04 17:00:28'),
+(13015, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 17:00:50', '2024-04-04 17:00:50'),
+(13016, 1, 'admin/hospital-bed/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 17:00:55', '2024-04-04 17:00:55'),
+(13017, 1, 'admin/hospital-bed/1', 'PUT', '127.0.0.1', '{\"hospital_id\":\"1\",\"name\":\"60\",\"_token\":\"SHV9fhEAQ6Sj6xdVFXdrI9M1TguhzxMFAGrWUYHe\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospital-bed\"}', '2024-04-04 17:01:06', '2024-04-04 17:01:06'),
+(13018, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-04-04 17:01:07', '2024-04-04 17:01:07'),
+(13019, 1, 'admin/hospitals', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 17:01:18', '2024-04-04 17:01:18'),
+(13020, 1, 'admin/hospitals/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 17:01:57', '2024-04-04 17:01:57'),
+(13021, 1, 'admin/hospitals', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 17:02:19', '2024-04-04 17:02:19'),
+(13022, 1, 'admin/hospitals/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-04 17:02:29', '2024-04-04 17:02:29'),
+(13023, 1, 'admin/hospitals/1', 'PUT', '127.0.0.1', '{\"hospital_name\":\"YASH HOSPITAL\",\"phone_number\":\"8358055777\",\"phone_with_code\":\"8358055777\",\"email\":\"sunil@gmail.com\",\"website\":null,\"address\":\"Flat no 101\\r\\nGurudev plaza , near new duniya office , vijay nagar indore\",\"latitude\":\"51.608082\",\"longitude\":\"51.834236\",\"username\":\"yeshospital\",\"password\":\"$2y$12$YPqAoV3oYlUaJD8b0wW7tuMEpiLH5bPi6.f4bMOJGPqm1mE2JCqxG\",\"opening_time\":\"21:20:42\",\"closing_time\":\"21:20:42\",\"description\":\"add yes hospital\",\"bed_count\":\"50\",\"type\":\"1\",\"status\":\"1\",\"is_recommended\":\"0\",\"admin_user_id\":\"158\",\"_token\":\"SHV9fhEAQ6Sj6xdVFXdrI9M1TguhzxMFAGrWUYHe\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/hospitals\"}', '2024-04-04 17:02:41', '2024-04-04 17:02:41'),
+(13024, 1, 'admin/hospitals', 'GET', '127.0.0.1', '[]', '2024-04-04 17:02:41', '2024-04-04 17:02:41'),
+(13025, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-04-05 04:46:00', '2024-04-05 04:46:00'),
+(13026, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-05 04:46:22', '2024-04-05 04:46:22'),
+(13027, 1, 'admin/hospital-bed/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2024-04-05 04:46:29', '2024-04-05 04:46:29'),
+(13028, 1, 'admin/hospital-bed', 'POST', '127.0.0.1', '{\"hospital_id\":\"2\",\"bed_count\":\"80\",\"_token\":\"4592AFdxiYB3YJK2qGvB3Xu0BIhb0jr81XJHEk79\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/hospital-bed\"}', '2024-04-05 04:46:38', '2024-04-05 04:46:38'),
+(13029, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-04-05 04:46:38', '2024-04-05 04:46:38'),
+(13030, 1, 'admin/hospital-bed', 'GET', '127.0.0.1', '[]', '2024-04-05 04:47:12', '2024-04-05 04:47:12');
 
 -- --------------------------------------------------------
 
@@ -13572,7 +13677,8 @@ INSERT INTO `admin_role_users` (`role_id`, `user_id`, `created_at`, `updated_at`
 (3, 155, NULL, NULL),
 (3, 156, NULL, NULL),
 (3, 157, NULL, NULL),
-(2, 158, NULL, NULL);
+(2, 158, NULL, NULL),
+(2, 159, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -13610,7 +13716,8 @@ INSERT INTO `admin_users` (`id`, `username`, `password`, `name`, `avatar`, `reme
 (155, '+919626080202', '$2y$12$JCBPW5cSbUr.ls5GTfBOxOE/CfVuTncXggKl8jH33kUXfLWksJ3AG', 'Jeeva store', 'static_images/avatar.png', NULL, NULL, NULL),
 (156, '+918681052727', '$2y$12$GosWF2sVCkaXcTPnM3YqjO.4heQ7QBO5mt/ChdLNZxMVpX0nDnx9K', 'Mala medical', 'static_images/avatar.png', NULL, NULL, NULL),
 (157, '+919865676127', '$2y$12$1N9JHXPMfTAbiWUISvPoAOWvIimxplJu7eiMJ8ySlH.BIwZInyfXW', 'DFSFDSFD', 'static_images/avatar.png', NULL, NULL, NULL),
-(158, 'yeshospital', '$2y$12$YPqAoV3oYlUaJD8b0wW7tuMEpiLH5bPi6.f4bMOJGPqm1mE2JCqxG', 'YASH HOSPITAL', 'Hospitals/2fbc77e8d0bbcd555d0432300219af15.png', NULL, NULL, NULL);
+(158, 'yeshospital', '$2y$12$YPqAoV3oYlUaJD8b0wW7tuMEpiLH5bPi6.f4bMOJGPqm1mE2JCqxG', 'YASH HOSPITAL', 'Hospitals/2fbc77e8d0bbcd555d0432300219af15.png', NULL, NULL, NULL),
+(159, 'sunilkumar', '$2y$12$nZ57kTti7zTkWAaAwewoH.fZzN9vzw/jLw6/wtn0ZwMlC1rZNV6cm', 'Green City Hospital', 'Hospitals/2355a848badc8c33b460da8654971e80.png', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -13710,7 +13817,7 @@ INSERT INTO `banners` (`id`, `app_module`, `link`, `banners`, `status`, `created
 
 CREATE TABLE `beds` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `bed_count` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
@@ -13721,8 +13828,12 @@ CREATE TABLE `beds` (
 -- Dumping data for table `beds`
 --
 
-INSERT INTO `beds` (`id`, `name`, `hospital_id`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'One', 1, 1, '2024-03-31 21:28:45', '2024-03-31 21:28:45');
+INSERT INTO `beds` (`id`, `bed_count`, `hospital_id`, `status`, `created_at`, `updated_at`) VALUES
+(1, '60', 1, 1, '2024-03-31 21:28:45', '2024-04-04 22:31:07'),
+(3, '50', 1, 1, '2024-04-03 23:52:50', '2024-04-03 23:52:50'),
+(4, '90', 1, 1, '2024-04-05 10:14:02', '2024-04-05 10:14:02'),
+(5, '80', 2, 1, '2024-04-05 10:16:38', '2024-04-05 10:16:38'),
+(6, '90', 2, 1, '2024-04-05 10:16:59', '2024-04-05 10:16:59');
 
 -- --------------------------------------------------------
 
@@ -13744,7 +13855,9 @@ CREATE TABLE `bed_statuses` (
 --
 
 INSERT INTO `bed_statuses` (`id`, `hospital_id`, `bed_id`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Active', '2024-03-31 22:14:40', '2024-03-31 22:14:40');
+(1, 1, 1, 'Empty', '2024-03-31 22:14:40', '2024-03-31 23:17:51'),
+(2, 1, 1, 'Assigned', '2024-03-31 23:17:37', '2024-03-31 23:17:37'),
+(3, 2, 2, 'Assigned', '2024-04-06 00:57:24', '2024-04-06 00:57:24');
 
 -- --------------------------------------------------------
 
@@ -14590,6 +14703,7 @@ CREATE TABLE `hospitals` (
   `closing_time` time DEFAULT NULL,
   `wallet` double NOT NULL DEFAULT 0,
   `description` text DEFAULT NULL,
+  `bed_count` varchar(256) NOT NULL DEFAULT '0',
   `overall_ratings` double NOT NULL DEFAULT 0,
   `no_of_ratings` int(11) NOT NULL DEFAULT 0,
   `type` int(11) NOT NULL DEFAULT 1,
@@ -14603,8 +14717,9 @@ CREATE TABLE `hospitals` (
 -- Dumping data for table `hospitals`
 --
 
-INSERT INTO `hospitals` (`id`, `admin_user_id`, `hospital_name`, `hospital_logo`, `phone_number`, `phone_with_code`, `email`, `website`, `password`, `username`, `address`, `latitude`, `longitude`, `opening_time`, `closing_time`, `wallet`, `description`, `overall_ratings`, `no_of_ratings`, `type`, `status`, `is_recommended`, `created_at`, `updated_at`) VALUES
-(1, 158, 'YASH HOSPITAL', 'Hospitals/2fbc77e8d0bbcd555d0432300219af15.png', '8358055777', '8358055777', 'sunil@gmail.com', NULL, '$2y$12$YPqAoV3oYlUaJD8b0wW7tuMEpiLH5bPi6.f4bMOJGPqm1mE2JCqxG', 'yeshospital', 'Flat no 101\r\nGurudev plaza , near new duniya office , vijay nagar indore', '51.608082', '51.834236', '21:20:42', '21:20:42', 0, 'add yes hospital', 0, 0, 1, 1, 0, '2024-03-31 21:26:14', '2024-03-31 21:26:14');
+INSERT INTO `hospitals` (`id`, `admin_user_id`, `hospital_name`, `hospital_logo`, `phone_number`, `phone_with_code`, `email`, `website`, `password`, `username`, `address`, `latitude`, `longitude`, `opening_time`, `closing_time`, `wallet`, `description`, `bed_count`, `overall_ratings`, `no_of_ratings`, `type`, `status`, `is_recommended`, `created_at`, `updated_at`) VALUES
+(1, 158, 'YASH HOSPITAL', 'Hospitals/2fbc77e8d0bbcd555d0432300219af15.png', '8358055777', '8358055777', 'sunil@gmail.com', NULL, '$2y$12$YPqAoV3oYlUaJD8b0wW7tuMEpiLH5bPi6.f4bMOJGPqm1mE2JCqxG', 'yeshospital', 'Flat no 101\r\nGurudev plaza , near new duniya office , vijay nagar indore', '51.608082', '51.834236', '21:20:42', '21:20:42', 0, 'add yes hospital', '50', 0, 0, 1, 1, 0, '2024-03-31 21:26:14', '2024-04-04 22:32:41'),
+(2, 159, 'Green City Hospital', 'Hospitals/2355a848badc8c33b460da8654971e80.png', '2815730858', '2815730858', 'sunilkumar@gmail.com', NULL, '$2y$12$nZ57kTti7zTkWAaAwewoH.fZzN9vzw/jLw6/wtn0ZwMlC1rZNV6cm', 'sunilkumar', 'Flat no 101', '51.608082', '51.834236', '10:00:54', '23:05:54', 0, 'bed_countbed_count', '50', 0, 0, 1, 1, 0, '2024-04-03 00:11:16', '2024-04-03 00:11:16');
 
 -- --------------------------------------------------------
 
@@ -16907,7 +17022,7 @@ ALTER TABLE `admin_menu`
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12926;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13031;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -16925,7 +17040,7 @@ ALTER TABLE `admin_roles`
 -- AUTO_INCREMENT for table `admin_users`
 --
 ALTER TABLE `admin_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT for table `app_modules`
@@ -16943,13 +17058,13 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `beds`
 --
 ALTER TABLE `beds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `bed_statuses`
 --
 ALTER TABLE `bed_statuses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `blogs`
@@ -17153,7 +17268,7 @@ ALTER TABLE `forum_questions`
 -- AUTO_INCREMENT for table `hospitals`
 --
 ALTER TABLE `hospitals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `hospital_app_settings`
