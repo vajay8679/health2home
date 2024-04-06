@@ -25,8 +25,6 @@ class BedApiController extends Controller
         $beds = DB::table('beds')
         ->select('beds.*','hospitals.*')
             ->leftJoin('hospitals', 'hospitals.id', '=', 'beds.hospital_id')
-            
-            // ->where('beds.hospital_id',$input['id'])
             ->orderBy('beds.created_at', 'desc')
             ->get();
             
@@ -116,11 +114,13 @@ class BedApiController extends Controller
      */
     public function show($id)
     {
-        
         $beds = DB::table('beds')
         ->select('beds.*','hospitals.*')
             ->leftJoin('hospitals', 'hospitals.id', '=', 'beds.hospital_id')
-            ->where('beds.id',$id)->first();
+            
+            ->where('beds.id',$id)
+            ->orderBy('beds.created_at', 'desc')
+            ->get();
             
         if ($beds) {
             return response()->json([
@@ -142,13 +142,14 @@ class BedApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($bed_id)
+    public function edit($id)
     {
+        // print_r($id);die;
         $beds = DB::table('beds')
         ->select('beds.*','hospitals.*')
             ->leftJoin('hospitals', 'hospitals.id', '=', 'beds.hospital_id')
             
-            ->where('beds.id',$bed_id)
+            ->where('beds.id',$id)
             ->orderBy('beds.created_at', 'desc')
             ->get();
             
@@ -173,17 +174,31 @@ class BedApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $bed_id)
+    public function update(Request $request)
     {
         
+        $input = $request->all();
+        $validator = Validator::make($input, [
+            'bed_id' => 'required|numeric',
+            'bed_count' => 'required|numeric',
+            'hospital_id' => 'required|numeric',
+            
+        ]);
+
+        if ($validator->fails()) {
+           
+            return response()->json(['message' => $validator->errors()], '404');
+        }
+// print_r($input);die;
+
+            $updatebeds =  Bed::where('id',$input['bed_id'])->update([ 'bed_count' => $input['bed_count'],'hospital_id' => $input['hospital_id'] ]);
+            // return $beds;
+            
+       
         $beds = DB::table('beds')
-        ->select('beds.*','hospitals.*')
+        ->select('beds.*','hospitals.hospital_name','hospitals.hospital_logo','hospitals.phone_number')
             ->leftJoin('hospitals', 'hospitals.id', '=', 'beds.hospital_id')
-            
-            ->where('beds.id',$bed_id)
-            ->orderBy('beds.created_at', 'desc')
-            ->get();
-            
+            ->where('beds.id',$input['bed_id'])->first();
         if ($beds) {
             return response()->json([
                 "result" => $beds,
@@ -204,9 +219,11 @@ class BedApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($bed_id)
+    public function destroy($id)
     {
-        $bed = Bed::find($bed_id); // Find the bed by its ID
+
+
+        $bed = Bed::find($id); // Find the bed by its ID
 
     if ($bed) {
         $bed->delete(); // Delete the bed record
@@ -223,3 +240,4 @@ class BedApiController extends Controller
     }
     }
 }
+

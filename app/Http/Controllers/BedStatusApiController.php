@@ -111,7 +111,26 @@ class BedStatusApiController extends Controller
      */
     public function show($id)
     {
-        //
+        $beds = DB::table('bed_statuses')
+        ->select('beds.*','hospitals.*','bed_statuses.*')
+            ->leftJoin('hospitals', 'hospitals.id', '=', 'bed_statuses.hospital_id')
+            ->leftJoin('beds', 'beds.id', '=', 'bed_statuses.bed_id')
+            ->where('bed_statuses.id',$id)
+            // ->orderBy('beds.created_at', 'desc')
+            ->get();
+            
+        if ($beds) {
+            return response()->json([
+                "result" => $beds,
+                "message" => 'Success',
+                "status" => 1
+            ]);
+        } else {
+            return response()->json([
+                "message" => 'Sorry, something went wrong !',
+                "status" => 0
+            ]);
+        }
     }
 
     /**
@@ -122,7 +141,26 @@ class BedStatusApiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $beds = DB::table('bed_statuses')
+        ->select('beds.*','hospitals.*','bed_statuses.*')
+            ->leftJoin('hospitals', 'hospitals.id', '=', 'bed_statuses.hospital_id')
+            ->leftJoin('beds', 'beds.id', '=', 'bed_statuses.bed_id')
+            ->where('bed_statuses.id',$id)
+            // ->orderBy('beds.created_at', 'desc')
+            ->get();
+            
+        if ($beds) {
+            return response()->json([
+                "result" => $beds,
+                "message" => 'Success',
+                "status" => 1
+            ]);
+        } else {
+            return response()->json([
+                "message" => 'Sorry, something went wrong !',
+                "status" => 0
+            ]);
+        }
     }
 
     /**
@@ -132,9 +170,46 @@ class BedStatusApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $input = $request->all();
+        $validator = Validator::make($input, [
+            'bed_id' => 'required|numeric',
+            'bed_status_id' => 'required|numeric',
+            'hospital_id' => 'required|numeric',
+            'status' => 'required',
+            
+        ]);
+
+        if ($validator->fails()) {
+           
+            return response()->json(['message' => $validator->errors()], '404');
+        }
+
+
+            $updatebeds =  BedStatus::where('id',$input['bed_status_id'])->update([ 'bed_id' => $input['bed_id'],'hospital_id' => $input['hospital_id'],'status' => $input['status'] ]);
+           
+        $beds = DB::table('bed_statuses')
+        ->select('beds.*','hospitals.*','bed_statuses.*')
+            ->leftJoin('hospitals', 'hospitals.id', '=', 'bed_statuses.hospital_id')
+            ->leftJoin('beds', 'beds.id', '=', 'bed_statuses.bed_id')
+            ->where('bed_statuses.id',$input['bed_status_id'])
+            // ->orderBy('beds.created_at', 'desc')
+            ->get();
+            
+
+        if ($beds) {
+            return response()->json([
+                "result" => $beds,
+                "message" => 'Success',
+                "status" => 1
+            ]);
+        } else {
+            return response()->json([
+                "message" => 'Sorry, something went wrong !',
+                "status" => 0
+            ]);
+        }
     }
 
     /**
@@ -145,6 +220,21 @@ class BedStatusApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bed = BedStatus::find($id); // Find the bed by its ID
+
+        if ($bed) {
+            $bed->delete(); // Delete the bed record
+    
+            return response()->json([
+                "message" => 'Bed status deleted successfully',
+                "status" => 1
+            ]);
+        } else {
+            return response()->json([
+                "message" => 'Bed status not found',
+                "status" => 0
+            ], 404); // Return 404 status code for not found
+        }
     }
 }
+

@@ -217,14 +217,19 @@ Route::get('e_prescription_download/{id}', 'App\Http\Controllers\DoctorConsultat
 Route::get('customer/cr_expiring', 'App\Http\Controllers\DoctorConsultationController@cr_expiring');
 Route::get('customer/cr_reminder', 'App\Http\Controllers\DoctorConsultationController@cr_reminder');
 // Route::get('customer/cr_reminder', 'App\Http\Controllers\DoctorConsultationController@cr_reminder');
+
 Route::get('customer/hospital_allbed', 'App\Http\Controllers\BedApiController@allBeds');
 Route::post('customer/hospital_add_bed', 'App\Http\Controllers\BedApiController@create');
-
 Route::get('customer/hospital_bed_detail/{id}', 'App\Http\Controllers\BedApiController@show');
-Route::put('customer/hospital_bed_update/{bed_id}', 'App\Http\Controllers\BedApiController@update');
-Route::post('customer/hospital_bed_detete/{bed_id}', 'App\Http\Controllers\BedApiController@destroy');
+Route::get('customer/hospital_edit_bed/{id}', 'App\Http\Controllers\BedApiController@edit');
+Route::post('customer/hospital_bed_update', 'App\Http\Controllers\BedApiController@update');
+Route::delete('customer/hospital_bed_detete/{id}', 'App\Http\Controllers\BedApiController@destroy');
 
 
 
 Route::get('customer/hospital_allbed_status', 'App\Http\Controllers\BedStatusApiController@allBedsStatus');
 Route::post('customer/hospital_add_bed_status', 'App\Http\Controllers\BedStatusApiController@create');
+Route::get('customer/hospital_bed_status_detail/{id}', 'App\Http\Controllers\BedStatusApiController@show');
+Route::get('customer/hospital_edit_status_bed/{id}', 'App\Http\Controllers\BedStatusApiController@edit');
+Route::post('customer/hospital_bed_status_update', 'App\Http\Controllers\BedStatusApiController@update');
+Route::delete('customer/hospital_bedstatus_detete/{id}', 'App\Http\Controllers\BedStatusApiController@destroy');
