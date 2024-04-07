@@ -38,7 +38,7 @@ class BedStatusController extends AdminController
             return $hospitals;
         });
         $grid->column('bed_id', __('Bed'))->display(function($beds){
-            $beds = Bed::where('id',$beds)->value('name');
+            $beds = Bed::where('id',$beds)->value('bed_count');
             return $beds;
         });
         $grid->column('status', __('Status'));
@@ -98,7 +98,7 @@ class BedStatusController extends AdminController
     {
         $form = new Form(new BedStatus());
         $hospitals = Hospital::pluck('hospital_name','id');
-        $beds = Bed::pluck('name','id');
+        $beds = Bed::pluck('bed_count','id');
        
 
         if(!Admin::user()->isAdministrator()){

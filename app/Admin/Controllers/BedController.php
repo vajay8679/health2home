@@ -32,7 +32,8 @@ class BedController extends AdminController
             $hospitals = Hospital::where('id',$hospitals)->value('hospital_name');
             return $hospitals;
         });
-        $grid->column('name', __('Bed Count'));
+        $grid->column('bed_type', __('Bed Type'));
+        $grid->column('bed_count', __('Bed Count'));
         
         if(Admin::user()->isAdministrator()){
             $grid->disableExport();
@@ -71,7 +72,8 @@ class BedController extends AdminController
         $show = new Show(Bed::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('name'));
+        $show->field('bed_count', __('bed_count'));
+        $show->field('bed_type', __('bed_type'));
         $show->field('hospital_id', __('hospital_id'));
         $show->field('status', __('Status'));
         $show->field('created_at', __('Created at'));
@@ -98,8 +100,14 @@ class BedController extends AdminController
             return 'required';
         });
         }
-        
-        $form->number('name', __('Bed Count'))->rules('required');
+        if (!Admin::user()->isAdministrator()) {
+            $form->hidden('bed_type')->value('Empty');
+        } else {
+            $form->select('bed_type', __('Bed Type'))
+                 ->options(['General Ward Beds' => 'General Ward Beds', 'ICU Beds' => 'ICU Beds','NICU Beds' => 'NICU Beds','PICU Beds' => 'PICU Beds','Maternity Beds' => 'Maternity Beds','Emergency Room Beds' => 'Emergency Room Beds','Surgical Beds' => 'Surgical Beds','Isolation Beds' => 'Isolation Beds','Psychiatric Beds' => 'Psychiatric Beds','Hospice Beds' => 'Hospice Beds'])
+                 ->rules('required'); 
+        } 
+        $form->number('bed_count', __('Bed Count'))->rules('required');
         
         $form->tools(function (Form\Tools $tools) {
            $tools->disableDelete(); 
